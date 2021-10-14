@@ -5,3 +5,4 @@ firebase_admin==5.0.2
 pickle5==0.0.11
 gunicorn==20.1.0
 sklearn 
+Flask-Cors

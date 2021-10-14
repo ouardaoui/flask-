@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify, render_template
-# from flask_cors import CORS
+from flask_cors import CORS
 import pickle5 as pickle
 import numpy as np
 import firebase_admin
@@ -9,7 +9,7 @@ import uuid
 
 
 app = Flask(__name__)
-# CORS(app)
+CORS(app)
 model = pickle.load(open('project.pkl', 'rb'))
 cred = credentials.Certificate("key1.json")
 firebase_admin.initialize_app(cred)
